@@ -1,0 +1,305 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    font-family: Arial, sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.dashboard{
+position: sticky;
+top: 0;
+    height:60px;
+    background-color: rgb(52, 48, 48);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+   
+
+}
+ul{
+    display: flex;
+  
+
+
+    
+}
+li{
+    margin: 30px;
+    list-style: none;
+    transition: 300ms ease-in-out;
+    text-align: center;
+    padding:5px;
+  
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+li:hover{
+background-color: chocolate;
+padding:5px;
+
+
+}
+a:hover{
+margin: 10px;
+
+}
+
+
+/* Banner */
+.banner {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+.bannertext {
+
+    margin-right: 15px;
+    text-align: center;
+    flex: 1;
+    background-color: blueviolet;
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+.bannertext h1 {
+    font-size: 24px; 
+    color: #e3dede;
+}
+.banner p{
+    color: #e3dede;
+
+}
+.bannerimg {
+    text-align: right;
+    flex: 1;
+    margin-top: 20px;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.call-to-action{
+    display: flex;
+ 
+    align-items: center;
+    justify-content: center;
+    
+}
+.call-btn{
+    margin: 50px;
+    padding: 7px;
+    width: 100px;
+    background-color: rgb(53, 53, 160);
+    color: white;
+    border: 2px solid rgb(70, 62, 62);
+    transition: 300ms ;
+    cursor: pointer;
+
+
+}
+.call-btn:hover{
+    background-color: rgb(34, 34, 38); 
+   
+}
+
+
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap; 
+    margin: 15px;
+}
+
+
+.card {
+   width: 270px;
+    margin-bottom: 20px; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+.card p{
+font-weight: bold;
+font-size: 17px;
+}
+.drug h1{
+text-align: center;
+}
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Dashboard navigation styles */
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard div {
+    margin-right: 20px;
+}
+
+.dashboard img {
+    max-width: 100px; 
+}
+
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.dashboard li {
+    margin: 0 10px; 
+}
+
+.dashboard a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.dashboard a:hover {
+    text-decoration: underline; 
+}
+
+
+@media screen and  (max-width:1000px){
+  .card{
+    margin-bottom: 20px; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+  }
+  .card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap; 
+    margin: 15px;
+}
+    
+}
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Footer content layout */
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Footer content layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 100px; /* Adjust the maximum width as needed */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin: 0 15px; /* Add margin between each list item */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #00bcd4; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover if desired */
+}
+
+/* Social media icons */
+.footer-social {
+    margin-top: 20px; /* Adjust spacing from links to social icons */
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px; /* Adjust icon size */
+    margin: 0 15px; /* Add margin between each icon */
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #00bcd4; /* Change color on hover */
+}
+
+/* Copyright notice */
+.footer-copy {
+    margin-top: 20px; /* Adjust spacing from social icons to copyright notice */
+    font-size: 14px; /* Adjust font size */
+}
+

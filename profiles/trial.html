@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Supply Profile</title>
+		<link rel="stylesheet" type="text/css" href="../administrator/styles.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<h2>Supply Profile</h2>
+
+		<div class = "container">
+			<h3>Supply Details</h3>
+			<p>Supply ID: <?php echo $supply['supplyId']; ?></p>
+			<p>Contract ID: <?php echo $supply['contractId']; ?></p>
+			<p>Status: <?php echo $supply['status']; ?></p>
+			<form method="POST" action="">
+				<input type="submit" name="markCompleted" value = "Mark Completed">
+			</form>
+
+		</div>
+		<div class = "container">
+			<h3>Supplied Drugs</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Trade Name</th>
+						<th>Scientific Name</th>
+						<th>Formula</th>
+						<th>Form</th>
+						<th>Manufacturing Date</th>
+						<th>Expiry Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ($suppliedDrugs as $suppliedDrug): ?>
+					<tr>
+						<td><?php echo $suppliedDrug['drugId']; ?></td>
+						<td><?php echo $suppliedDrug['tradeName']; ?></td>
+						<td><?php echo $suppliedDrug['scientificName']; ?></td>
+						<td><?php echo $suppliedDrug['formula']; ?></td>
+						<td><?php echo $suppliedDrug['form']; ?></td>
+						<td><?php echo $suppliedDrug['dateManufactured']; ?></td>
+						<td><?php echo $suppliedDrug['expiryDate']; ?></td>
+					</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		</div>
+		<div class = "container">
+			<h3>Add Drug to Supply</h3>
+			<form method="POST" action="">
+				<div class="form-group">
+					<label for="tradeName">Trade Name</label>
+					<br>
+					<input type="text" name="tradeName" id="tradeName" required>
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="scientificName">scientificName</label>
+					<br>
+					<input type="text" name="scientificName" id="scientificName" required>
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="formula">Formula</label>
+					<br>
+					<input type="text" name="formula" id="formula" required>
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="form">Form</label>
+					<br>
+					<input type="text" name="form" id="form" required>
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="dateManufactured">Date Manufactured</label>
+					<br>
+					<input type="date" name="dateManufactured" id="dateManufactured" required>
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="expiryDate">Expiry Date</label>
+					<br>
+					<input type="date" name="expiryDate" id="expiryDate" required>
+					<br>
+				</div>
+				<div class="form-group">
+					<input type="submit" name="addDrug" value = "Add Drug">
+				</div>
+			</form>
+		</div>
+		<div class = "container">
+			<h3>Payments</h3>
+			<table>
+				<tr>
+					<th>Payment ID</th>
+					<th>Date</th>
+					<th>Amount</th>
+					<th>Payment Method</th>
+				</tr>
+				<?php foreach ($payments as $payment) { ?>
+				<tr>
+					<td><?php echo $payment['supplyPaymentId']; ?></td>
+					<td><?php echo $payment['dateCreated']; ?></td>
+					<td><?php echo $payment['amountCashed']; ?></td>
+					<td><?php echo $payment['method']; ?></td>
+				</tr>
+				<?php } ?>
+			</table>
+		</div>
+		<div class = "container">
+			<h3>Add Payment for Supply</h3>
+			<form method="POST" action="">
+				<div class="form-group">
+					<label for="amountCashed">Amount Cashed</label>
+					<br>
+					<input type="number" name="amountCashed" id="amountCashed" required>
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="method">Method</label>
+					<br>
+					<input type="number" name="method" id="method" required>
+					<br>
+				</div>
+				<div class="form-group">
+					<input type="submit" name="addPayment" value = "Add Payment">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

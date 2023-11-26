@@ -1,0 +1,19 @@
+.
+├── administrator
+│   ├── prescriptions.php
+│   ├── registeredContracts.php
+│   ├── registeredDoctors.php
+│   ├── registeredHealthCenters.php
+│   ├── registeredPatients.php
+│   ├── registeredPharmaceuticals.php
+│   ├── registeredPharmacies.php
+│   ├── registeredPharmacists.php
+│   ├── registeredSupervisors.php
+├── registration
+│   ├── registerDoctor.php
+│   ├── registerHospital.php
+│   ├── registerPatient.php
+│   ├── registerPharmaceutical.php
+│   ├── registerPharmacist.php
+│   ├── registerPharmacy.php
+│   ├── registerSupervisor.php
